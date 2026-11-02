@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101c2c">
+  <meta name="description" content="Book trusted local help in Mysuru for computer support, web development, spare drivers, painting work and dog grooming. Contact Mysore Service Solutions on WhatsApp.">
+  <title>Mysore Service Solutions | Local Help, Made Simple</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #142235;
+      --muted: #66758a;
+      --paper: #f7f8fb;
+      --white: #fff;
+      --navy: #101c2c;
+      --navy-2: #172b42;
+      --blue: #3167f5;
+      --blue-dark: #2450ce;
+      --mint: #dff7ed;
+      --line: #e5eaf1;
+      --shadow: 0 18px 55px rgba(20, 34, 53, .09);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { font-family: "DM Sans", sans-serif; background: var(--paper); color: var(--ink); line-height: 1.65; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-weight: 800; font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; border-radius: 9px; background: currentColor; }
+    h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.04em; line-height: 1.13; }
+    h2 { font-size: clamp(2rem, 4vw, 3.15rem); }
+    .section-intro { max-width: 650px; margin: 14px auto 0; color: var(--muted); font-size: 1.06rem; }
+    .section-heading { text-align: center; max-width: 760px; margin: 0 auto 44px; }
+    .section-heading .eyebrow { margin-bottom: 15px; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 10px; border: 0; border-radius: 999px; padding: 14px 22px; font-weight: 800; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: white; background: var(--blue); box-shadow: 0 10px 24px rgba(49,103,245,.24); }
+    .btn-primary:hover { background: var(--blue-dark); box-shadow: 0 14px 30px rgba(49,103,245,.3); }
+    .btn-light { background: white; color: var(--ink); border: 1px solid var(--line); }
+    .btn-light:hover { box-shadow: var(--shadow); }
+    .btn-whatsapp { color: #073b25; background: #25d366; }
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(229,234,241,.9); }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; min-width: 0; }
+    .brand img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid #dce7ff; }
+    .brand-name { font: 800 1rem/1.15 Manrope, sans-serif; letter-spacing: -.035em; }
+    .brand-name span { display: block; color: var(--muted); font: 600 .72rem/1.5 "DM Sans", sans-serif; letter-spacing: .01em; }
+    .nav-links { list-style: none; display: flex; align-items: center; gap: 28px; color: #526176; font-size: .91rem; font-weight: 700; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .nav-actions .btn { padding: 11px 17px; font-size: .9rem; }
+    .menu-toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%; background: white; font-size: 1.2rem; cursor: pointer; }
+    .hero { position: relative; overflow: hidden; background: var(--navy); color: white; padding: 78px 0 84px; }
+    .hero::before { content: ""; position: absolute; width: 580px; height: 580px; border-radius: 50%; background: rgba(49,103,245,.22); filter: blur(5px); top: -280px; right: -130px; pointer-events: none; }
+    .hero::after { content: ""; position: absolute; width: 350px; height: 350px; border-radius: 50%; border: 1px solid rgba(255,255,255,.09); right: 8%; bottom: -230px; box-shadow: 0 0 0 45px rgba(255,255,255,.025), 0 0 0 90px rgba(255,255,255,.02); pointer-events: none; }
+    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 62px; align-items: center; position: relative; z-index: 1; }
+    .hero .eyebrow { color: #9fbaff; margin-bottom: 23px; }
+    .hero h1 { font-size: clamp(2.8rem, 5.8vw, 5.25rem); max-width: 700px; }
+    .hero h1 span { color: #91b1ff; }
+    .hero-copy { color: #c2ccda; font-size: clamp(1rem, 1.6vw, 1.15rem); max-width: 580px; margin: 23px 0 30px; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero .btn-light { background: rgba(255,255,255,.08); color: white; border-color: rgba(255,255,255,.18); }
+    .hero-points { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 30px; color: #d8e1ed; font-size: .87rem; }
+    .hero-points span { display: inline-flex; align-items: center; gap: 8px; }
+    .check { display: inline-grid; place-items: center; width: 21px; height: 21px; border-radius: 50%; color: #a4f0c7; background: rgba(72,210,139,.13); font-size: .8rem; font-weight: 900; }
+    .hero-visual { position: relative; min-width: 0; }
+    .hero-image-wrap { border-radius: 28px; padding: 10px; background: rgba(255,255,255,.11); border: 1px solid rgba(255,255,255,.18); box-shadow: 0 35px 90px rgba(0,0,0,.35); transform: rotate(1.5deg); }
+    .hero-image { width: 100%; aspect-ratio: 4 / 4.15; object-fit: cover; object-position: center; border-radius: 20px; background: #26374d; }
+    .floating-note { position: absolute; display: flex; align-items: center; gap: 12px; background: white; color: var(--ink); padding: 14px 17px; border-radius: 17px; box-shadow: 0 18px 45px rgba(0,0,0,.22); }
+    .floating-note.one { left: -34px; top: 12%; }
+    .floating-note.two { right: -22px; bottom: 10%; }
+    .note-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px; background: #edf2ff; font-size: 1.3rem; }
+    .floating-note strong { display: block; font: 800 .86rem Manrope, sans-serif; }
+    .floating-note small { display: block; color: var(--muted); font-size: .76rem; }
+    .trust-strip { background: white; border-bottom: 1px solid var(--line); }
+    .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); padding: 24px 0; gap: 20px; }
+    .trust-item { display: flex; align-items: center; justify-content: center; gap: 12px; text-align: left; }
+    .trust-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 14px; background: #eef3ff; font-size: 1.15rem; }
+    .trust-item strong { display: block; font: 800 .9rem Manrope, sans-serif; }
+    .trust-item span { display: block; color: var(--muted); font-size: .79rem; }
+    section { padding: 94px 0; }
+    .services-section { background: var(--paper); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .service-card { position: relative; display: flex; flex-direction: column; align-items: flex-start; background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; min-height: 270px; box-shadow: 0 5px 18px rgba(20,34,53,.025); transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: #c6d5ff; }
+    .service-icon { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 18px; font-size: 1.75rem; margin-bottom: 23px; background: #edf2ff; }
+    .service-card:nth-child(2) .service-icon { background: #f1eaff; }
+    .service-card:nth-child(3) .service-icon { background: #fff0dc; }
+    .service-card:nth-child(4) .service-icon { background: #ffe8e7; }
+    .service-card:nth-child(5) .service-icon { background: #e0f8ec; }
+    .service-card h3 { font-size: 1.28rem; margin-bottom: 10px; }
+    .service-card p { color: var(--muted); font-size: .94rem; margin-bottom: 22px; }
+    .service-link { margin-top: auto; color: var(--blue); font-size: .9rem; font-weight: 800; display: inline-flex; align-items: center; gap: 7px; }
+    .service-link span { transition: transform .2s ease; }
+    .service-card:hover .service-link span { transform: translateX(4px); }
+    .why-section { background: white; }
+    .why-grid { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 70px; }
+    .why-visual { min-height: 390px; border-radius: 28px; background: linear-gradient(145deg, #e8efff, #f7f9ff 55%, #dff7ed); display: grid; place-items: center; position: relative; overflow: hidden; }
+    .why-visual::before, .why-visual::after { content: ""; position: absolute; border: 1px solid rgba(49,103,245,.15); border-radius: 50%; width: 300px; height: 300px; }
+    .why-visual::after { width: 410px; height: 410px; }
+    .why-logo { width: min(230px, 58%); aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 8px solid white; box-shadow: 0 20px 50px rgba(30,58,120,.18); z-index: 1; }
+    .why-content .eyebrow { margin-bottom: 17px; }
+    .why-content h2 { margin-bottom: 17px; }
+    .why-content > p { color: var(--muted); margin-bottom: 28px; }
+    .benefit-list { list-style: none; display: grid; gap: 17px; }
+    .benefit-list li { display: flex; align-items: flex-start; gap: 13px; }
+    .benefit-list .check { flex: 0 0 25px; width: 25px; height: 25px; background: var(--mint); color: #08764a; margin-top: 2px; }
+    .benefit-list strong { display: block; font-weight: 800; margin-bottom: 2px; }
+    .benefit-list span { display: block; color: var(--muted); font-size: .9rem; }
+    .booking-section { background: #eef2f8; }
+    .booking-panel { background: var(--navy); color: white; border-radius: 30px; padding: clamp(26px, 5vw, 54px); box-shadow: 0 25px 70px rgba(16,28,44,.16); }
+    .booking-head { text-align: center; max-width: 680px; margin: 0 auto 36px; }
+    .booking-head .eyebrow { color: #a9beff; margin-bottom: 15px; }
+    .booking-head p { color: #bdc9d9; margin-top: 14px; }
+    .booking-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: start; }
+    .booking-form { display: grid; gap: 17px; }
+    .field label { display: block; font-size: .88rem; font-weight: 700; margin-bottom: 7px; color: #e5ebf5; }
+    .field input, .field select, .field textarea { width: 100%; color: white; background: #1a2a40; border: 1px solid #35465c; border-radius: 12px; padding: 13px 15px; outline: none; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: #8daaff; box-shadow: 0 0 0 3px rgba(141,170,255,.13); }
+    .field input::placeholder, .field textarea::placeholder { color: #93a2b6; }
+    .field select option { color: white; background: #1a2a40; }
+    .booking-form .btn { width: 100%; margin-top: 3px; }
+    .booking-side { background: #172940; border: 1px solid #33465d; border-radius: 22px; padding: 25px; }
+    .side-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: rgba(37,211,102,.13); font-size: 1.6rem; margin-bottom: 18px; }
+    .booking-side h3 { font-size: 1.35rem; margin-bottom: 10px; }
+    .booking-side p { color: #b8c6d8; font-size: .92rem; margin-bottom: 20px; }
+    .preview-label { font-size: .73rem; text-transform: uppercase; letter-spacing: .12em; color: #9fb0c5; font-weight: 800; margin-bottom: 8px; }
+    .preview-message { border-radius: 14px 14px 14px 4px; padding: 15px; color: #e9f5ee; background: #174b3c; font-size: .9rem; overflow-wrap: anywhere; }
+    .small-note { color: #9fb0c5; font-size: .78rem; margin-top: 12px; }
+    .final-cta { padding: 72px 0; background: white; }
+    .final-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .final-cta h2 { font-size: clamp(1.8rem, 3.5vw, 2.65rem); max-width: 600px; }
+    .final-cta p { color: var(--muted); margin-top: 10px; }
+    .final-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    footer { background: #0b1523; color: #b7c2d0; padding: 30px 0; font-size: .86rem; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .footer-brand { color: white; font-weight: 800; }
+    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .footer-links a:hover { color: white; }
+    .floating-whatsapp { position: fixed; z-index: 40; right: 22px; bottom: 22px; display: inline-flex; align-items: center; gap: 10px; padding: 13px 19px; background: #25d366; color: #073b25; border-radius: 999px; font-weight: 800; box-shadow: 0 12px 30px rgba(8,80,45,.24); transition: transform .2s ease; }
+    .floating-whatsapp:hover { transform: translateY(-3px); }
+    .floating-whatsapp span { font-size: 1.15rem; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+    @media (max-width: 980px) {
+      .nav-links { gap: 17px; }
+      .nav-actions .btn-light { display: none; }
+      .hero-grid { gap: 38px; }
+      .floating-note.one { left: -14px; }
+      .floating-note.two { right: -10px; }
+      .why-grid { gap: 40px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 32px, 560px); }
+      .nav { min-height: 70px; }
+      .brand img { width: 41px; height: 41px; }
+      .brand-name { font-size: .92rem; }
+      .nav-actions { margin-left: auto; }
+      .nav-actions .btn { padding: 10px 13px; font-size: .82rem; }
+      .menu-toggle { display: inline-grid; place-items: center; }
+      .nav-links { display: none; position: absolute; top: calc(100% + 1px); left: 0; right: 0; padding: 18px 22px 22px; background: white; border-bottom: 1px solid var(--line); box-shadow: 0 18px 25px rgba(20,34,53,.08); flex-direction: column; align-items: stretch; gap: 0; }
+      .nav-links.open { display: flex; }
+      .nav-links li a { display: block; padding: 12px 0; }
+      .hero { padding: 62px 0 65px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 46px; }
+      .hero h1 { font-size: clamp(2.65rem, 12vw, 4rem); }
+      .hero-copy { font-size: 1rem; }
+      .hero-visual { width: min(100% - 18px, 430px); margin: 0 auto; }
+      .hero-image { aspect-ratio: 1 / 1; }
+      .floating-note { padding: 10px 12px; gap: 9px; }
+      .floating-note.one { top: 8%; left: -12px; }
+      .floating-note.two { bottom: 7%; right: -12px; }
+      .note-icon { width: 34px; height: 34px; border-radius: 10px; }
+      .floating-note strong { font-size: .77rem; }
+      .floating-note small { font-size: .68rem; }
+      .trust-grid { grid-template-columns: 1fr; gap: 16px; padding: 22px 0; }
+      .trust-item { justify-content: flex-start; }
+      section { padding: 72px 0; }
+      .services-grid { grid-template-columns: 1fr; gap: 14px; }
+      .service-card { min-height: 0; padding: 24px; }
+      .service-icon { margin-bottom: 17px; }
+      .why-grid { grid-template-columns: 1fr; gap: 34px; }
+      .why-visual { min-height: 300px; }
+      .booking-grid { grid-template-columns: 1fr; }
+      .booking-panel { border-radius: 24px; }
+      .final-cta-inner { align-items: flex-start; flex-direction: column; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .floating-whatsapp { right: 14px; bottom: 14px; padding: 12px 16px; font-size: .88rem; }
+    }
+    @media (max-width: 380px) {
+      .brand-name { max-width: 130px; }
+      .nav-actions .btn { display: none; }
+      .hero-buttons .btn { width: 100%; }
+      .hero-points { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="brand" aria-label="Mysore Service Solutions home">
+        <img src="https://files.catbox.moe/7r23qk.jpg" alt="Mysore Service Solutions logo">
+        <div class="brand-name">Mysore Service Solutions<span>Local help. One easy booking.</span></div>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services">Our services</a></li>
+        <li><a href="#why-us">Why choose us</a></li>
+        <li><a href="#booking">How to book</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-light" href="#services">Explore services</a>
+        <a class="btn btn-primary" href="#booking">Book a service <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy-wrap reveal">
+          <div class="eyebrow">Your local service partner in Mysuru</div>
+          <h1>Good help.<br><span>Without the hassle.</span></h1>
+          <p class="hero-copy">From fixing your computer to giving your home a fresh look, find the help you need in one place. Choose a service and tell us what you need on WhatsApp.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#booking">Book on WhatsApp <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-light" href="#services">See our services <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-points">
+            <span><i class="check">✓</i> Simple booking</span>
+            <span><i class="check">✓</i> Local service requests</span>
+            <span><i class="check">✓</i> Five service categories</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="hero-image-wrap">
+            <img class="hero-image" src="https://files.catbox.moe/2yu8n2.jpg" alt="Mysore Service Solutions service poster">
+          </div>
+          <div class="floating-note one">
+            <div class="note-icon">💬</div>
+            <div><strong>Easy enquiries</strong><small>Start on WhatsApp</small></div>
+          </div>
+          <div class="floating-note two">
+            <div class="note-icon">📍</div>
+            <div><strong>Mysuru-focused</strong><small>Help for everyday needs</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip" aria-label="Booking highlights">
+      <div class="container trust-grid">
+        <div class="trust-item"><div class="trust-icon">⚡</div><div><strong>Quick to enquire</strong><span>Send your request directly</span></div></div>
+        <div class="trust-item"><div class="trust-icon">🧰</div><div><strong>Five useful services</strong><span>One convenient starting point</span></div></div>
+        <div class="trust-item"><div class="trust-icon">🤝</div><div><strong>Talk before you book</strong><span>Discuss your requirements first</span></div></div>
+      </div>
+    </div>
+
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow">What can we help with?</div>
+          <h2>Choose the service you need.</h2>
+          <p class="section-intro">Pick a category to start your request. We’ll open WhatsApp with your chosen service ready to go.</p>
+        </div>
+        <div class="services-grid">
+          <a class="service-card reveal" href="#booking" data-service="Computer Support">
+            <div class="service-icon">💻</div><h3>Computer Support</h3>
+            <p>Computer troubleshooting, software setup, performance issues, maintenance and repair enquiries.</p>
+            <span class="service-link">Request computer help <span>→</span></span>
+          </a>
+          <a class="service-card reveal" href="#booking" data-service="Web Development">
+            <div class="service-icon">🌐</div><h3>Web Development</h3>
+            <p>Business websites, responsive page design, domain registration and hosting setup enquiries.</p>
+            <span class="service-link">Discuss a website <span>→</span></span>
+          </a>
+          <a class="service-card reveal" href="#booking" data-service="Spare Driver">
+            <div class="service-icon">🚗</div><h3>Spare Driver</h3>
+            <p>Ask about a driver for local travel, outstation journeys or other driving requirements.</p>
+            <span class="service-link">Ask about a driver <span>→</span></span>
+          </a>
+          <a class="service-card reveal" href="#booking" data-service="Painting Work">
+            <div class="service-icon">🎨</div><h3>Painting Work</h3>
+            <p>Interior and exterior painting enquiries for homes, offices and other spaces.</p>
+            <span class="service-link">Plan painting work <span>→</span></span>
+          </a>
+          <a class="service-card reveal" href="#booking" data-service="Dog Grooming">
+            <div class="service-icon">🐶</div><h3>Dog Grooming</h3>
+            <p>Ask about bathing, coat care, trimming and grooming options for your dog.</p>
+            <span class="service-link">Ask about grooming <span>→</span></span>
+          </a>
+          <a class="service-card reveal" href="#booking" data-service="">
+            <div class="service-icon">🙋</div><h3>Not sure yet?</h3>
+            <p>Tell us what you’re looking for and we can start with a simple enquiry.</p>
+            <span class="service-link">Talk to our team <span>→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-section" id="why-us">
+      <div class="container why-grid">
+        <div class="why-visual reveal">
+          <img class="why-logo" src="https://files.catbox.moe/7r23qk.jpg" alt="Mysore Service Solutions logo">
+        </div>
+        <div class="why-content reveal">
+          <div class="eyebrow">A simpler way to get started</div>
+          <h2>Clear requests. Direct communication.</h2>
+          <p>Finding the right service shouldn’t feel complicated. Choose what you need, share a convenient time and send the details directly to us on WhatsApp.</p>
+          <ul class="benefit-list">
+            <li><i class="check">✓</i><div><strong>One place to start</strong><span>Browse all five service categories without searching around.</span></div></li>
+            <li><i class="check">✓</i><div><strong>Your request, your details</strong><span>Tell us the service and preferred time before discussing next steps.</span></div></li>
+            <li><i class="check">✓</i><div><strong>Talk directly on WhatsApp</strong><span>Your message opens in WhatsApp so you can review it before sending.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div class="container">
+        <div class="booking-panel reveal">
+          <div class="booking-head">
+            <div class="eyebrow">Let’s get your request started</div>
+            <h2>What do you need help with?</h2>
+            <p>Fill in a few details. We’ll prepare a WhatsApp message for you to review and send.</p>
+          </div>
+          <div class="booking-grid">
+            <form class="booking-form" id="booking-form">
+              <div class="field"><label for="customer-name">Your name</label><input id="customer-name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required maxlength="100"></div>
+              <div class="field"><label for="service">Choose a service</label><select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option>Computer Support</option><option>Web Development</option><option>Spare Driver</option><option>Painting Work</option><option>Dog Grooming</option><option>General Enquiry</option>
+              </select></div>
+              <div class="field"><label for="preferred-time">Preferred date or time</label><input id="preferred-time" name="time" type="text" placeholder="e.g. Tomorrow around 10 AM" required maxlength="120"></div>
+              <div class="field"><label for="details">Anything else we should know? <span style="font-weight:400;color:#9fb0c5">(optional)</span></label><textarea id="details" name="details" rows="3" placeholder="Briefly describe what you need..." maxlength="500"></textarea></div>
+              <button class="btn btn-whatsapp" type="submit">Continue to WhatsApp <span aria-hidden="true">↗</span></button>
+            </form>
+            <aside class="booking-side">
+              <div class="side-icon">💬</div>
+              <h3>Your message, ready to send</h3>
+              <p>Check the preview below. Press the green button to open WhatsApp, then send the message to complete your enquiry.</p>
+              <div class="preview-label">Message preview</div>
+              <div class="preview-message" id="message-preview">Hello, my name is [Your name]. I’d like to enquire about [Service] for [Preferred time].</div>
+              <div class="small-note">Opening WhatsApp does not automatically send the message. You’ll be able to review it first.</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container final-cta-inner">
+        <div><div class="eyebrow">Need help choosing?</div><h2>Tell us what you’re looking for.</h2><p>Send a quick message and start the conversation.</p></div>
+        <div class="final-actions">
+          <a class="btn btn-primary" href="https://wa.me/918105903224" target="_blank" rel="noopener noreferrer">Chat on WhatsApp ↗</a>
+          <a class="btn btn-light" href="#services">Browse services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><div class="footer-brand">Mysore Service Solutions</div><div>© <span id="year"></span> Mysore Service Solutions. All rights reserved.</div></div>
+      <div class="footer-links"><a href="#services">Services</a><a href="#why-us">Why choose us</a><a href="#booking">Book a service</a><a href="https://wa.me/918105903224" target="_blank" rel="noopener noreferrer">WhatsApp</a></div>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/918105903224" target="_blank" rel="noopener noreferrer" aria-label="Chat with Mysore Service Solutions on WhatsApp"><span>☏</span> Chat on WhatsApp</a>
+
+  <script>
+    const WHATSAPP_NUMBER = "918105903224"; // Replace with the business number in international format, digits only.
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+    navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "☰";
+    }));
+
+    const nameInput = document.getElementById("customer-name");
+    const serviceInput = document.getElementById("service");
+    const timeInput = document.getElementById("preferred-time");
+    const detailsInput = document.getElementById("details");
+    const preview = document.getElementById("message-preview");
+
+    function buildMessage() {
+      const name = nameInput.value.trim() || "[Your name]";
+      const service = serviceInput.value || "[Service]";
+      const time = timeInput.value.trim() || "[Preferred time]";
+      const details = detailsInput.value.trim();
+      return `Hello, my name is ${name}. I’d like to enquire about ${service} for ${time}.${details ? ` Additional details: ${details}` : ""}`;
+    }
+    function updatePreview() { preview.textContent = buildMessage(); }
+    [nameInput, serviceInput, timeInput, detailsInput].forEach(el => {
+      el.addEventListener("input", updatePreview);
+      el.addEventListener("change", updatePreview);
+    });
+
+    document.querySelectorAll("[data-service]").forEach(card => {
+      card.addEventListener("click", () => {
+        const chosen = card.dataset.service;
+        if (chosen) serviceInput.value = chosen;
+        else serviceInput.value = "General Enquiry";
+        updatePreview();
+      });
+    });
+
+    document.getElementById("booking-form").addEventListener("submit", event => {
+      event.preventDefault();
+      updatePreview();
+      const message = buildMessage();
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const revealItems = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add("visible"));
+    }
+  </script>
+</body>
+</html>
